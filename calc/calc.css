@@ -1,0 +1,89 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(90deg, rgba(2,0,36,0.865983893557423) 0%, rgba(173,128,44,1) 22%, rgba(255,0,146,1) 100%);
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.calculator{
+    background: rgba(255,255,255,0.3);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px;
+    flex-basis: 450px;
+    height: 625px;
+    padding: 25px 20px;
+}
+
+.interface{
+    background: rgba(255,255,255,0.7);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(10,10,10,0.2);
+    font-size: 50px;
+    overflow: auto;
+    padding: 10px;
+    text-align: right;
+}
+
+.button-row{
+    display: flex;
+    justify-content: space-between;
+    margin:5%;
+}
+
+.button{
+    padding: 15px 15px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    flex-basis: 20%;
+    height: 60px;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.change-input{
+    background: rgba(255, 218, 0, 0.65);
+}
+
+.change-input:hover{
+    background: rgba(255, 218, 0, 0.4);
+}
+
+.calc-buttons{
+    background: rgba(255, 0, 221, 0.27);
+}
+
+.calc-buttons:hover{
+    background: rgba(255, 0, 221, 0.05);
+}
+
+.calc-number{
+    background: rgba(0, 0, 0, 0.56);
+    color: white;
+}
+
+.calc-number:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+

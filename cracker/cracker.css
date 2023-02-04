@@ -1,0 +1,378 @@
+html {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: arial;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg, #419803, #39ff00) no-repeat;
+}
+
+#rightCracker > .abrisskante .abriss {
+    height: 30px;
+    width: 30px;
+    background-color: #00ffe4;
+    transform: translate(5px, -1px) rotate(45deg);
+}
+
+#cracker {
+    cursor: pointer;
+    height: 120px;
+    width: 30%;
+    transform: scaleX(1);
+    text-align: center;
+    margin-top: 15em;
+}
+
+#crackerCon {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 300px);
+}
+
+#weihnachten {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+    color: #ff0000;
+    text-shadow: 3px 3px #ffc300;
+    animation: null;
+}
+
+#witzfeld {
+    text-align: center;
+    animation: null;
+    position: absolute;
+    top: 50%;
+}
+
+#linkerCracker {
+    width: 300px;
+    height: 120px;
+    animation: null;
+}
+
+#rightCracker {
+    position: relative;
+    top: -120px;
+    left: 286px;
+    width: 300px;
+    height: 120px;
+    transform: rotate(180deg);
+    animation: null;
+}
+
+
+.end {
+    position: relative;
+    top: -120px;
+    left: 0px;
+    height: 120px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #e1ad00;
+}
+
+.handle {
+    position: relative;
+    top: 0px;
+    left: 5px;
+    height: 120px;
+    width: 50px;
+    background-color: #ffc300;
+}
+
+.handle2 {
+    position: relative;
+    top: -240px;
+    left: 55px;
+    border-left: 40px solid #e1ad00;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    height: 70px;
+    width: 0;
+}
+
+.ring {
+    position: relative;
+    top: -338px;
+    left: 95px;
+    height: 76px;
+    width: 15px;
+    background-color: #244B96;
+    border-radius: 3px;
+}
+
+.body {
+    position: relative;
+    top: -435px;
+    left: 110px;
+    border-right: 20px solid #e1ad00;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    height: 70px;
+    width: 0;
+}
+
+.body2 {
+    position: relative;
+    top: -556px;
+    left: 130px;
+    height: 120px;
+    width: 150px;
+    background: linear-gradient(-45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 23, 121, 1) 10%, rgba(0, 255, 231, 1) 19%, rgba(39, 255, 0, 1) 30%, rgba(255, 93, 0, 1) 49%, rgba(255, 0, 150, 1) 65%, rgba(255, 173, 0, 1) 79%, rgba(0, 0, 0, 1) 100%);
+}
+
+.abrisskante {
+    position: relative;
+    top: -676px;
+    left: 260px;
+    height: 120px;
+    width: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+}
+
+.abriss {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(45deg, rgba(255, 195, 0, 1) 40%, rgb(2, 220, 2) 50%);
+    transform: translate(5px, -14px) rotate(45deg);
+}
+
+.instructions {
+    position: absolute;
+    font-size: 8em;
+    bottom: 0px;
+    margin: 0;
+}
+
+@keyframes title {
+    from {
+        font-size: 30px;
+        transform: translate(0px, 0px);
+    }
+    to {
+        font-size: 60px;
+        transform: translate(0px, -20vh);
+    }
+}
+
+@keyframes titleReset {
+    from {
+        font-size: 60px;
+        transform: translate(0px, -20vh);
+    }
+    to {
+        font-size: 30px;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes joke {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes jokeReset {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes left {
+    from {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+    to {
+        transform: translate(-20vw, 80px) rotate(-17deg)
+    }
+}
+
+@keyframes leftReset {
+    from {
+        transform: translate(-20vw, 80px) rotate(-17deg)
+    }
+    to {
+        transform: translate(0px, 0px) rotate(0deg)
+    }
+}
+
+@keyframes right {
+    from {
+        transform: translate(0px, 0px) rotate(180deg)
+    }
+    to {
+        transform: translate(20vw, 80px) rotate(169deg)
+    }
+}
+
+@keyframes rightReset {
+    from {
+        transform: translate(20vw, 80px) rotate(169deg)
+    }
+    to {
+        transform: translate(0px, 0px) rotate(180deg)
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    h4 {
+        font-size: 1em;
+        font-weight: lighter;
+        margin-block-start: 1em;
+        margin-block-end: 0em;
+    }
+
+    #crackerCon {
+        position: absolute;
+        top: calc(50% - 30px);
+        left: calc(50% - 150px);
+    }
+
+    #linkerCracker {
+        width: 150px;
+        height: 60px;
+        animation: null;
+    }
+
+    #rightCracker {
+        position: relative;
+        top: -60px;
+        left: 143px;
+        width: 150px;
+        height: 60px;
+        transform: rotate(180deg);
+        animation: null;
+    }
+
+    #cracker {
+        cursor: pointer;
+        height: 60px;
+        width: 40%;
+    }
+
+    #rightCracker > .abrisskante .abriss {
+        height: 15px;
+        width: 15px;
+        background-color: #00ffe4;
+        transform: translate(2.5px, -0.5px) rotate(45deg);
+    }
+
+    .handle {
+        position: relative;
+        top: 0px;
+        left: 2.5px;
+        height: 60px;
+        width: 25px;
+        background-color: #ffc300;
+    }
+
+    .end {
+        position: relative;
+        top: -60px;
+        left: 0px;
+        height: 60px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: #e1ad00;
+    }
+
+    .handle2 {
+        position: relative;
+        top: -120px;
+        left: 27.5px;
+        border-left: 20px solid #e1ad00;
+        border-top: 12.5px solid transparent;
+        border-bottom: 12.5px solid transparent;
+        height: 35px;
+        width: 0;
+    }
+
+    .ring {
+        position: relative;
+        top: -169px;
+        left: 47.5px;
+        height: 38px;
+        width: 7.5px;
+        background-color: #244B96;
+        border-radius: 1.5px;
+    }
+
+    .body {
+        position: relative;
+        top: -217.5px;
+        left: 55px;
+        border-right: 10px solid #e1ad00;
+        border-top: 12.5px solid transparent;
+        border-bottom: 12.5px solid transparent;
+        height: 35px;
+        width: 0;
+    }
+
+    .body2 {
+        position: relative;
+        top: -278px;
+        left: 65px;
+        height: 60px;
+        width: 75px;
+        background: linear-gradient(-45deg, rgba(2, 0, 36, 1) 0%, rgba(9, 23, 121, 1) 10%, rgba(0, 255, 231, 1) 19%, rgba(39, 255, 0, 1) 30%, rgba(255, 93, 0, 1) 49%, rgba(255, 0, 150, 1) 65%, rgba(255, 173, 0, 1) 79%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .abrisskante {
+        position: relative;
+        top: -338px;
+        left: 130px;
+        height: 60px;
+        width: 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .abriss {
+        height: 15px;
+        width: 15px;
+        background: linear-gradient(45deg, rgba(255, 195, 0, 1) 40%, rgb(2, 220, 2) 50%);
+        transform: translate(2.5px, -7px) rotate(45deg);
+    }
+
+    @keyframes title {
+        from {
+            font-size: 15px;
+            transform: translate(0px, 0px);
+        }
+        to {
+            font-size: 30px;
+            transform: translate(0px, -10vh);
+        }
+    }
+    @keyframes titleReset {
+        from {
+            font-size: 30px;
+            transform: translate(0px, -10vh);
+        }
+        to {
+            font-size: 15px;
+            transform: translate(0px, 0px);
+        }
+    }
+
+}

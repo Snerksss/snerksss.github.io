@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📲</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.svg">
+</head>
+<body>
+<div class="calculator">
+    <div class="interface" id="uinterface">
+        0
+    </div>
+    <div class="buttons">
+        <div class="button-row">
+            <button class="button change-input" onclick="ce()">
+                CE
+            </button>
+            <button class="button change-input" onclick="c()">
+                C
+            </button>
+            <button class="button change-input" onclick="backspace()">
+                &#x2190
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button calc-buttons" onclick="xPowerY()">
+                x<sup>y</sup>
+            </button>
+            <button class="button calc-buttons" onclick="xPower2()">
+                x<sup>2</sup>
+            </button>
+            <button class="button calc-buttons" onclick="sqrRoot()">
+                &#8730
+            </button>
+            <button class="button calc-buttons" onclick="divide()">
+                &#xF7
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button calc-number" onclick="number('7')">
+                7
+            </button>
+            <button class="button calc-number" onclick="number('8')">
+                8
+            </button>
+            <button class="button calc-number" onclick="number('9')">
+                9
+            </button>
+            <button class="button calc-buttons" onclick="multiplication()">
+                &#215
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button calc-number" onclick="number('4')">
+                4
+            </button>
+            <button class="button calc-number" onclick="number('5')">
+                5
+            </button>
+            <button class="button calc-number" onclick="number('6')">
+                6
+            </button>
+            <button class="button calc-buttons" onclick="subtraction()">
+                &#x2212
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button calc-number" onclick="number('1')">
+                1
+            </button>
+            <button class="button calc-number" onclick="number('2')">
+                2
+            </button>
+            <button class="button calc-number" onclick="number('3')">
+                3
+            </button>
+            <button class="button calc-buttons" onclick="addition()">
+                &#43
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button calc-number" onclick="zero()">
+                0
+            </button>
+            <button class="button calc-number" onclick="point()">
+                .
+            </button>
+            <button class="button calc-number" onclick="changeMinusPlus()">
+                &#43/&#x2212
+            </button>
+            <button class="button calc-buttons" onclick="calculate()">
+                &#61
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="calc.js"></script>
+</html>
