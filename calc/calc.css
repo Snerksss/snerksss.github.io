@@ -4,6 +4,7 @@ html{
 }
 
 body{
+    align-items: center;
     font-family: sans-serif;
     background: linear-gradient(90deg, rgba(2,0,36,0.865983893557423) 0%, rgba(173,128,44,1) 22%, rgba(255,0,146,1) 100%);
     display: flex;
