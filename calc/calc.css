@@ -30,6 +30,7 @@ body{
     box-shadow: 0 4px 30px rgba(10,10,10,0.2);
     font-size: 50px;
     overflow: auto;
+    height: 58px;
     padding: 10px;
     text-align: right;
 }
