@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    max-height: 100%;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,128,45,1) 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.weather{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.51);
+    padding: 30px 30px;
+    border-radius: 18px;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.searchbar{
+    position: relative;
+    z-index: 5;
+    float: right;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchbar input{
+    background: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    height: 80%;
+    font-size: 1.3em;
+}
+
+.buttons{
+    display: flex;
+    width: 30%
+}
+
+.buttons button{
+    background: rgba(0, 0, 0, 0);
+    font-size: 2.0em;
+    height: 100%;
+    width: 100%;
+}
+
+.buttons button:hover{
+    background: rgba(255, 255, 255, 0.52);
+}
+
+.weather-container{
+    text-align: center;
+    height: 90%
+}
+
+#weather-image{
+    position: relative;
+    z-index: 0;
+    height: 50%;
+}
+
+
+.weather-information{
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.weather-main{
+    font-size: 4em;
+}
+
+
+
+.weather-add-row{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 80px
+}
+
+.info-temp{
+    font-size: 1.5em;
+}
+
+.info {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.36);
+}
+
+.sun_moon {
+    width: 40px;
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.list {
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 5px 5px;
+}
+
+.list-items {
+    max-width: 100%;
+    position: relative;
+    padding: 10px 5px;
+    z-index: 5;
+}
+
+.list-items:hover {
+    background-color: #ffffff;
+}
+
+#input {
+    padding-top: 5%;
+}
+
+#help{
+    max-height: 100%;
+}

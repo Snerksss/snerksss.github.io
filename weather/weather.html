@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+<div class="weather">
+    <div class="searchbar">
+        <div id="help">
+            <input id="input" type="text" placeholder="Your Location">
+            <ul class="list"></ul>
+        </div>
+        <div class="buttons">
+            <button onclick="getWeatherCurrentPos()">📍</button>
+            <button onclick="fetchCityNames()">🔎</button>
+        </div>
+
+    </div>
+    <div class="weather-container">
+        <img id="weather-image" src="./img/thunderstorm.svg">
+        <div class="weather-information">
+            <div class="weather-main">
+                <p id="temperature">?</p>
+            </div>
+            <div class="weather-add-row">
+                <div id="min">
+                    <p class="info-temp" id="min_temp">?</p>
+                    <p class="info">min</p>
+                </div>
+                <div id="max">
+                    <p class="info-temp" id="max_temp">?</p>
+                    <p class="info">max</p>
+                </div>
+
+            </div>
+            <div class="weather-add-row">
+                <div class="sun_moon">
+                    <img id="sun_up_img" src="./img/sun.svg">
+                    <p id="sun_up">?</p>
+                </div>
+                <div class="sun_moon">
+                    <img id="sun_down_img" src="./img/moon.svg">
+                    <p id="sun_down">?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="weather.js"></script>
+</body>
+
+</html>

@@ -23,4 +23,5 @@ function seconds_with_leading_zeros(dt)
     return (dt.getSeconds() < 10 ? '0' : '') + dt.getSeconds();
 }
 
+updateTime()
 setInterval(updateTime, 1000)
