@@ -1,5 +1,4 @@
 let input = document.getElementById("input");
-let took = 0;
 let cities;
 
 function fetchCityNames() {
@@ -38,7 +37,6 @@ function fetchCityNames() {
 }
 
 function displayNames(value, count) {
-    console.log(cities.results[count])
     getWeather(cities.results[count].latitude, cities.results[count].longitude)
     input.value = value;
     removeElements();
@@ -47,7 +45,6 @@ function displayNames(value, count) {
 function getWeatherCurrentPos() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-
     } else {
         alert("Geolocation is not supported by this browser.");
     }
@@ -58,13 +55,11 @@ function showPosition(position) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(xhttp.responseText))
             input.value = JSON.parse(xhttp.responseText).address.town
         }
     };
     xhttp.open("GET", "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude, true);
     xhttp.send();
-
 }
 
 function getWeather(lat, long) {
@@ -72,7 +67,6 @@ function getWeather(lat, long) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const weather = JSON.parse(xhttp.responseText);
-            console.log(weather);
             document.getElementById("temperature").innerHTML = weather.current_weather.temperature + "°";
             document.getElementById("min_temp").innerHTML = weather.daily.temperature_2m_min[0] + "°";
             document.getElementById("max_temp").innerHTML = weather.daily.temperature_2m_max[0] + "°";

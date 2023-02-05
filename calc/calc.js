@@ -1,6 +1,20 @@
 let calc = ["0", "", ""];
 let count = 0;
 let setted = false;
+let secondSite = false;
+
+
+function second() {
+    if (secondSite === false) {
+        secondSite = true;
+        document.getElementById("powerXY").innerHTML = "10<sup>x</sup>"
+    } else {
+        secondSite = false;
+        document.getElementById("powerXY").innerHTML = "x<sup>y</sup>"
+
+    }
+}
+
 
 function ce() {
     if (count === 2) {
@@ -33,7 +47,12 @@ function backspace() {
 }
 
 function xPowerY() {
-    calc[1] = "^";
+    if (secondSite === false) {
+        calc[1] = "^";
+    } else {
+        calc[0] = "10";
+        calc[1] = "^";
+    }
     count = 2;
     update()
 }
@@ -111,7 +130,7 @@ function calculate() {
 }
 
 function point() {
-    if(count === 0) {
+    if (count === 0) {
         if (calc[0].length > 0) {
             calc[0] = calc[0] + "."
         } else {
@@ -130,8 +149,8 @@ function point() {
 }
 
 function changeMinusPlus() {
-    if(calc[count].length > 0) {
-        if(calc[count].substring(0,1) !== "-") {
+    if (calc[count].length > 0) {
+        if (calc[count].substring(0, 1) !== "-") {
             calc[count] = "-" + calc[count]
         } else {
             calc[count] = calc[count].substring(1)
