@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../favicon.svg">
 </head>
 <body>
+<a id="goBack" href="../index.html">Go Back</a>
 <div class="weather">
     <div class="searchbar">
         <div id="help">
@@ -26,24 +27,35 @@
                 <p id="temperature">?</p>
             </div>
             <div class="weather-add-row">
-                <div id="min">
-                    <p class="info-temp" id="min_temp">?</p>
-                    <p class="info">min</p>
+                <div class="row-content">
+                    <div id="min">
+                        <p class="info-temp" id="min_temp">?</p>
+                        <p class="info">min</p>
+                    </div>
+                    <div id="max">
+                        <p class="info-temp" id="max_temp">?</p>
+                        <p class="info">max</p>
+                    </div>
                 </div>
-                <div id="max">
-                    <p class="info-temp" id="max_temp">?</p>
-                    <p class="info">max</p>
+                <div class="row-content">
+                    <div class="sun_moon">
+                        <p id="sun_up">?</p>
+                        <img id="sun_up_img" src="./img/sun.svg">
+                    </div>
+                    <div class="sun_moon">
+                        <p id="sun_down">?</p>
+                        <img id="sun_down_img" src="./img/moon.svg">
+                    </div>
                 </div>
-
             </div>
-            <div class="weather-add-row">
-                <div class="sun_moon">
-                    <img id="sun_up_img" src="./img/sun.svg">
-                    <p id="sun_up">?</p>
+            <div id="wind" class="weather-add-row">
+                <div class="sun_moon extra">
+                    <p id="wind-speed">?</p>
+                    <img id="wind-speed-img" src="./img/windy.svg">
                 </div>
-                <div class="sun_moon">
-                    <img id="sun_down_img" src="./img/moon.svg">
-                    <p id="sun_down">?</p>
+                <div class="sun_moon extra">
+                    <p id="wind-direction">?</p>
+                    <img id="wind-direction-img" src="./img/compass.svg">
                 </div>
             </div>
         </div>

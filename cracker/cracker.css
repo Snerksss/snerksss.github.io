@@ -4,6 +4,14 @@ html {
     width: 100vw;
 }
 
+#goBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    text-decoration: none;
+}
+
 body {
     display: flex;
     justify-content: center;

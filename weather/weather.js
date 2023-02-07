@@ -67,14 +67,17 @@ function getWeather(lat, long) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const weather = JSON.parse(xhttp.responseText);
+            console.log(weather)
             document.getElementById("temperature").innerHTML = weather.current_weather.temperature + "°";
             document.getElementById("min_temp").innerHTML = weather.daily.temperature_2m_min[0] + "°";
             document.getElementById("max_temp").innerHTML = weather.daily.temperature_2m_max[0] + "°";
-            const sunrise = weather.daily.sunrise[0]
-            const sunset = weather.daily.sunset[0]
-            document.getElementById("sun_up").innerHTML = sunrise.substring(sunrise.length - 5)
-            document.getElementById("sun_down").innerHTML = sunset.substring(sunset.length - 5)
-            swapWeatherImage(Number(weather.current_weather.weathercode))
+            const sunrise = weather.daily.sunrise[0];
+            const sunset = weather.daily.sunset[0];
+            document.getElementById("sun_up").innerHTML = sunrise.substring(sunrise.length - 5);
+            document.getElementById("sun_down").innerHTML = sunset.substring(sunset.length - 5);
+            document.getElementById("wind-speed").innerHTML = weather.current_weather.windspeed + "km/h";
+            document.getElementById("wind-direction").innerHTML = weather.current_weather.winddirection + "°";
+            swapWeatherImage(Number(weather.current_weather.weathercode));
         }
     };
     xhttp.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + long + "&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&current_weather=true&timezone=Europe%2FBerlin", true);
