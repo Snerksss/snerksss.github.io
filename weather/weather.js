@@ -3,6 +3,9 @@ let cities;
 let counter = 0;
 let windy = document.getElementById("wind-speed-img");
 let windyAnimation;
+let cssVariables = document.querySelector(':root');
+let darkMode = false;
+let checkbox = document.getElementById('myCheckbox');
 
 function fetchCityNames() {
     var xhttp = new XMLHttpRequest();
@@ -137,9 +140,34 @@ function startAnimation() {
     windyAnimation= setInterval(swapAnimationElements, 400);
 }
 
+
+function darkModeTrigger() {
+    let rootVariables = getComputedStyle(cssVariables);
+    if(darkMode === true) {
+        cssVariables.style.setProperty("--background", rootVariables.getPropertyValue("--background-dark"));
+        cssVariables.style.setProperty("--text-color-main", rootVariables.getPropertyValue("--text-color-main-dark"));
+        cssVariables.style.setProperty("--background-container", rootVariables.getPropertyValue("--background-container-dark"));
+        cssVariables.style.setProperty("--text-color-second", rootVariables.getPropertyValue("--text-color-second-dark"));
+    } else {
+        cssVariables.style.setProperty("--background", rootVariables.getPropertyValue("--background-bright"));
+        cssVariables.style.setProperty("--text-color-main", rootVariables.getPropertyValue("--text-color-main-bright"));
+        cssVariables.style.setProperty("--background-container", rootVariables.getPropertyValue("--background-container-bright"));
+        cssVariables.style.setProperty("--text-color-second", rootVariables.getPropertyValue("--text-color-second-bright"));
+    }
+}
+
 function stopAnimation(){
     clearInterval(windyAnimation);
     counter = 0;
     windy.src="./img/windy.svg";
 }
 
+checkbox.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+        darkMode = true;
+        darkModeTrigger()
+    } else {
+        darkMode = false;
+        darkModeTrigger()
+    }
+})

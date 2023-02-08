@@ -1,3 +1,23 @@
+:root {
+    --background-bright: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 128, 45, 1) 100%);
+    --background-dark: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(128,0,182,1) 100%);
+    --background: var(--background-bright);
+
+    --background-container-bright: rgba(255, 255, 255, 0.51);
+    --background-container-dark: rgba(185, 185, 185, 0.36);
+    --background-container: var(--background-container-bright);
+
+    --text-color-main-bright: black;
+    --text-color-main-dark: rgb(189, 189, 189);
+    --text-color-main: var(--text-color-main-bright);
+
+    --text-color-second-bright: rgba(0, 0, 0, 0.6);
+    --text-color-second-dark: rgba(171, 171, 171, 0.68);
+    --text-color-second: var(--text-color-second-bright);
+
+    --text-color-third: black;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +30,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: black;
+    color: var(--text-color-second);
     text-decoration: none;
 }
 
@@ -19,11 +39,12 @@ html {
 }
 
 body {
+    color: var(--text-color-main);
     height: 100vh;
     font-family: sans-serif;
     display: flex;
     max-height: 100%;
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 128, 45, 1) 100%);
+    background: var(--background);
     align-items: center;
     justify-content: center;
 }
@@ -32,7 +53,7 @@ body {
     position: relative;
     width: 450px;
     height: 600px;
-    background: rgba(255, 255, 255, 0.51);
+    background: var(--background-container);
     padding: 20px 20px;
     border-radius: 18px;
     font-family: sans-serif;
@@ -111,7 +132,7 @@ body {
 
 .info {
     font-size: 1em;
-    color: rgba(0, 0, 0, 0.36);
+    color: var(--text-color-second);
 }
 
 .sun_moon {
@@ -130,6 +151,7 @@ ul {
 }
 
 .list {
+    color: var(--text-color-third);
     z-index: 10;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
@@ -156,7 +178,7 @@ ul {
 }
 
 .row-content {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color-main);
     font-size: 1.15em;
     width: 43%;
     display: flex;
@@ -194,4 +216,56 @@ ul {
     to {
         transform: rotate(360deg);
     }
+}
+
+#input{
+    color: var(--text-color-main);
+}
+
+#input::placeholder{
+    color: var(--text-color-main);
+}
+
+.switch {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 64px;
+    height: 34px;
+    display: inline-block;
+}
+
+.switch span {		    /* Der graue Untergrund des Schalters */
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color .4s;
+}
+
+.switch span::before {    /* Der kreisrunde Button im Switch */
+    background-color: white;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+}
+
+input:checked + span {
+    background-color: #001764;
+}
+
+input:checked + span::before {
+    transform: translateX(30px);
+}
+
+.switch input {
+    display: none;
 }
