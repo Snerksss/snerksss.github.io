@@ -139,6 +139,7 @@ function startAnimation() {
 
 function stopAnimation(){
     clearInterval(windyAnimation);
+    counter = 0;
     windy.src="./img/windy.svg";
 }
 
