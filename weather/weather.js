@@ -1,5 +1,8 @@
 let input = document.getElementById("input");
 let cities;
+let counter = 0;
+let windy = document.getElementById("wind-speed-img");
+let windyAnimation;
 
 function fetchCityNames() {
     var xhttp = new XMLHttpRequest();
@@ -115,3 +118,27 @@ function removeElements() {
         item.remove();
     });
 }
+
+function swapAnimationElements() {
+    if(counter === 0){
+        windy.src="./img/breathIN.svg";
+    } else if (counter === 1) {
+        windy.src="./img/wind0.svg";
+    } else if (counter === 2) {
+        windy.src="./img/wind1.svg";
+    } else if (counter === 3) {
+        windy.src="./img/windy.svg";
+        counter = -1;
+    }
+    counter++;
+}
+
+function startAnimation() {
+    windyAnimation= setInterval(swapAnimationElements, 400);
+}
+
+function stopAnimation(){
+    clearInterval(windyAnimation);
+    windy.src="./img/windy.svg";
+}
+

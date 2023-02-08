@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,21 +14,21 @@
     text-decoration: none;
 }
 
-html{
+html {
     height: 100%
 }
 
-body{
+body {
     height: 100vh;
     font-family: sans-serif;
     display: flex;
     max-height: 100%;
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,128,45,1) 100%);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 128, 45, 1) 100%);
     align-items: center;
     justify-content: center;
 }
 
-.weather{
+.weather {
     position: relative;
     width: 450px;
     height: 600px;
@@ -39,7 +39,7 @@ body{
     overflow: hidden;
 }
 
-.searchbar{
+.searchbar {
     position: relative;
     z-index: 5;
     float: right;
@@ -50,53 +50,52 @@ body{
     justify-content: space-between;
 }
 
-.searchbar input{
+.searchbar input {
     background: rgba(0, 0, 0, 0);
     border-radius: 5px;
     height: 80%;
     font-size: 1.3em;
 }
 
-.buttons{
+.buttons {
     display: flex;
     width: 30%
 }
 
-.buttons button{
+.buttons button {
     background: rgba(0, 0, 0, 0);
     font-size: 2.0em;
     height: 100%;
     width: 100%;
 }
 
-.buttons button:hover{
+.buttons button:hover {
     background: rgba(255, 255, 255, 0.52);
 }
 
-.weather-container{
+.weather-container {
     text-align: center;
     height: 90%
 }
 
-#weather-image{
+#weather-image {
     position: relative;
     z-index: 0;
     height: 50%;
 }
 
 
-.weather-information{
+.weather-information {
     height: 500px;
     margin-bottom: 50px;
 }
 
-.weather-main{
+.weather-main {
     font-size: 4em;
 }
 
 
-
-.weather-add-row{
+.weather-add-row {
     margin-left: 50px;
     margin-right: 50px;
     align-items: center;
@@ -106,7 +105,7 @@ body{
     font-size: 1.2em;
 }
 
-.info-temp{
+.info-temp {
     font-size: 1.2em;
 }
 
@@ -122,8 +121,8 @@ body{
     font-size: 1.2em;
 }
 
-.sun_moon img{
-    width:40px;
+.sun_moon img {
+    width: 40px;
 }
 
 ul {
@@ -152,11 +151,11 @@ ul {
     padding-top: 5%;
 }
 
-#help{
+#help {
     max-height: 100%;
 }
 
-.row-content{
+.row-content {
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.15em;
     width: 43%;
@@ -164,7 +163,7 @@ ul {
     justify-content: space-between;
 }
 
-.extra{
+.extra {
     width: 80px;
     font-size: 1.1em;
 }
@@ -173,7 +172,26 @@ ul {
     width: 60px;
 }
 
-#wind{
+#wind {
     padding-left: 30px;
     padding-right: 30px;
+}
+
+#wind-direction-img {
+    max-width: 60%;
+}
+
+#wind-direction-img:hover{
+    animation: rotate 2s infinite;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
