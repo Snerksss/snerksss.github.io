@@ -143,7 +143,7 @@ function startAnimation() {
 
 function darkModeTrigger() {
     let rootVariables = getComputedStyle(cssVariables);
-    if(darkMode === true) {
+    if(darkMode) {
         cssVariables.style.setProperty("--background", rootVariables.getPropertyValue("--background-dark"));
         cssVariables.style.setProperty("--text-color-main", rootVariables.getPropertyValue("--text-color-main-dark"));
         cssVariables.style.setProperty("--background-container", rootVariables.getPropertyValue("--background-container-dark"));
@@ -171,3 +171,14 @@ checkbox.addEventListener('change', (event) => {
         darkModeTrigger()
     }
 })
+
+function openWebsiteBrightDarkChange() {
+    const d = new Date();
+    if (d.getHours() > 17 || window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        darkMode = true;
+        checkbox.checked = true
+        darkModeTrigger()
+    }
+}
+
+openWebsiteBrightDarkChange();
